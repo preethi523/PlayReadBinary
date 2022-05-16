@@ -3,12 +3,11 @@
 # https://www.playframework.com/documentation/latest/ScalaRouting
 # ~~~~
 
-# An example controller showing a sample home page
-GET     /                         controllers.HomeController.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-GET     /read                      controllers.readBinary.getAll()
-GET     /read/file                 controllers.readBinary.get()
++nocrcf
+POST    /read/file                 controllers.readBinary.updateConfFile
+
 
